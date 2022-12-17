@@ -6,38 +6,13 @@ import java.util.Scanner;
 
 public class B1b9 {
     public static void main(String[] args){
-
-//        String[] words = searchText.replaceAll("\\p{Punct}", "").split(" ");
         Scanner kytu = new Scanner(System.in);
-//        System.out.println("Nhập chuỗi ký tự : ");
-//        String chuoi = kytu.nextLine();
-        String chuoi = "ho thi and ho bb thi a a a a a a bb bb";
-//        System.out.println(chuoi);
+        System.out.print("Nhap chuoi ky tu: ");
+        String chuoi = kytu.nextLine();
+//        String chuoi = "ho thi and ho bb thi a a a a a a bb bb";
         String[] dem = chuoi.split("\\s");
-
-//        Map<String,Integer> map = new HashMap<>();
-//
-//        for (String s:dem){
-
-//            if(map.containsKey(s)){
-//                Integer value = map.get(s);
-//                value++;
-//                 map.replace(s,value);
-//
-//            }else {
-//                map.put(s,1);
-//            }
-//            int count = 0;
-//            if(dem.equals(map)){
-//                count++;
-//
-//            }
-
-//        }
-
         System.out.println("-------------------");
-//        System.out.println(map.toString());
-        System.out.println(dem.length);
+        System.out.println("Tong cong co "+dem.length+" tu");
         for(int i = 0; i < dem.length; i ++){
             int count = 1;
             String current = dem[i];
@@ -48,7 +23,7 @@ public class B1b9 {
                 }
             }
             if(count >= 1 && !current.equals("0")){
-                System.out.println("chuoi:"+current+" lap: "+ count);
+                System.out.println("So lan xuat hien cua tu: " +current+"_"+ count+" lan");
             }
         }
     }

@@ -6,11 +6,10 @@ public class B1b2 {
     public static final char CHAR_55 = 55;
 
     public static void main(String[] args){
+
         int n = 15;
-        System.out.println("So " + n + " trong he co so 2 = "
-                + B1b2.convertNumber(n, 2));
-        System.out.println("So " + n + " trong he co so 16 = "
-                + B1b2.convertNumber(n, 16));
+        System.out.println("So " + n + " trong he co so 2 = " + B1b2.convertNumber(n, 2));
+        System.out.println("So " + n + " trong he co so 16 = " + B1b2.convertNumber(n, 16));
     }
     public static String convertNumber(int n, int b) {
         if (n < 0 || b < 2 || b > 16 ) {
