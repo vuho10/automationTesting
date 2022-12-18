@@ -6,49 +6,50 @@ import java.util.Scanner;
 public class Computer {
     String nameComputer;
     int typeComputer;
+    Computer(){};
     Computer ( String nameComputer, int typeComputer) {
         this.nameComputer = nameComputer;
         this.typeComputer = typeComputer;
     }
+    String getNameComputer() {
+        return this.nameComputer = nameComputer;
 
+    }
+    void setNameComputer(String newName)
+    {
+        this.nameComputer = newName;
+    }
+    int getTypeComputer() {
+        return this.typeComputer = typeComputer;
+    }
+    void setTypeComputer( int newType) {
+        this.typeComputer = newType;
+    }
 
-//    String getNameComputer() {
-//        return this.nameComputer = nameComputer;
-//
-//    }
-//    void setNameComputer(String newName)
-//    {
-//        this.nameComputer = newName;
-//    }
-//    int getTypeComputer() {
-//        return this.typeComputer = typeComputer;
-//    }
-//    void setTypeComputer( int newType) {
-//        this.typeComputer = newType;
-//    }
-
-
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ArrayList<Computer> listComputer = new ArrayList<>();
-
+        ArrayList<Computer> listComputer = new ArrayList<Computer>();
         System.out.print("Enter number computer: ");
         int n = sc.nextInt();
-
         for ( int i = 0; i < n; i++) {
             System.out.println(String.format("Enter place %s", i+1));
             System.out.print("Enter name of computer: ");
             String name = sc.next();
-
-            System.out.print("Enter type of computer: ");
-            int type = sc.nextInt();
+            int type;
+            while ( true ) {
+                System.out.print("Enter type of computer: ");
+                type = sc.nextInt();
+                if ( type >= 1 && type <= 3 ) {
+                    break;
+                }
+            }
 
             Computer computer = new Computer(name, type);
             listComputer.add(computer);
         }
         for ( int x = 0; x < listComputer.size(); x++) {
             System.out.println("");
-            System.out.print("Computer "+ (x+1) +"_ Name: " + listComputer.get(x).nameComputer + " ;" + "Type: " + listComputer.get(x).typeComputer);
+            System.out.print("name " + listComputer.get(x).nameComputer + " - " + "type " + listComputer.get(x).typeComputer);
         }
 
     }

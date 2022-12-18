@@ -5,13 +5,17 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class B1b9 {
+
+//    dem so lan xuat hien cua tu do
+
     public static void main(String[] args){
-        Scanner kytu = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Nhap chuoi ky tu: ");
-        String chuoi = kytu.nextLine();
+        String chuoi = sc.nextLine();
 //        String chuoi = "ho thi and ho bb thi a a a a a a bb bb";
         String[] dem = chuoi.split("\\s");
         System.out.println("-------------------");
+
         System.out.println("Tong cong co "+dem.length+" tu");
         for(int i = 0; i < dem.length; i ++){
             int count = 1;
